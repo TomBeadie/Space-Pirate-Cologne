@@ -3,7 +3,8 @@
   --clr-orange-accent: #ec9636;
   --clr-background-blue: #455c69;
 
-  --ff-base: "Montserrat", sans-serif;
+  --ff-primary-font: "Montserrat", sans-serif;
+  --ff-secondary-font: "Montague Slab", sans-serif;
   --fw-regular: 500;
   --fw-bold: 700;
 }
@@ -72,8 +73,40 @@ h6 {
 }
 
 body {
-  font-family: var(--ff-base);
-  font-weight: var(--fw-regular);
-  font-size: 0.875rem;
   background-color: var(--clr-background-blue);
+  display: flex;
+  width: 90rem;
+  height: 64rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 1rem;
+  border: 2px solid var(--Orange-Accent, #ec9636);
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  }
+
+  .content {
+    display: flex;
+    padding: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: #DDD;
+    
+  }
 }
