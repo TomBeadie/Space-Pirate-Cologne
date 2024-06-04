@@ -75,8 +75,9 @@ h6 {
 body {
   background-color: var(--clr-background-blue);
   display: flex;
-  width: 90rem;
-  height: 64rem;
+  width: 100vw;
+  height: 100svh;
+  padding: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -84,14 +85,18 @@ body {
 
 .product-card {
   display: flex;
+  width: 64rem;
+  height: 36rem;
   align-items: flex-start;
   border-radius: 1rem;
   border: 2px solid var(--Orange-Accent, #ec9636);
+  overflow: hidden;
 
   .image-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     flex: 1 0 0;
     align-self: stretch;
 
@@ -106,7 +111,73 @@ body {
     align-items: center;
     flex: 1 0 0;
     align-self: stretch;
-    background: #DDD;
-    
+    background: #ddd;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      flex: 1 0 0;
+      align-items: stretch;
+
+      .product-category {
+        color: var(--Light-Gray, #8f8e91);
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+      .product-title {
+        color: var(--Dark-Blue, #111924);
+        font-family: "Montagu Slab";
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+      .product-description {
+        align-self: stretch;
+        color: var(--Dark-Blue, #111924);
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .product-price {
+        color: var(--Dark-Blue, #111924);
+        font-family: "Montagu Slab";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .button {
+      display: flex;
+      padding: 1rem 0rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      align-self: stretch;
+      border-radius: 0.5rem;
+      border: 2px solid var(--Dark-Blue, #111924);
+      background: var(--Orange-Accent, #ec9636);
+      box-shadow: 2px 4px 0px 0px #000;
+
+      .button-text {
+        color: var(--Dark-Blue, #111924);
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
   }
 }
